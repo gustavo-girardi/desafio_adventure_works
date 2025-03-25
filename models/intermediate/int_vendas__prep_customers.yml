@@ -1,0 +1,61 @@
+models:
+  - name: int_person__prep_customers
+    description: Modelo que enriquece os dados de clientes com nome
+    columns:
+      - name: PK_CUSTOMER
+        description: Para preencher
+        data_tests:
+          - unique
+          - not_null
+
+      - name: MODIFIEDDATE_CUSTOMER
+        description: Para preencher
+
+
+      - name: PERSONTYPE
+        description: Para preencher
+
+
+      - name: NAMESTYLE
+        description: Para preencher
+
+
+      - name: TITLE
+        description: Para preencher
+
+
+      - name: FIRSTNAME
+        description: Para preencher
+
+
+      - name: MIDDLENAME
+        description: Para preencher
+
+
+      - name: LASTNAME
+        description: Para preencher
+
+
+      - name: SUFFIX
+        description: Para preencher
+
+
+      - name: EMAILPROMOTION
+        description: Para preencher
+
+
+      - name: ADDITIONALCONTACTINFO
+        description: Para preencher
+
+
+      - name: DEMOGRAPHICS
+        description: Para preencher
+
+
+      - name: ROWGUID_PERSON
+        description: Para preencher
+
+
+      - name: MODIFIEDDATE_PERSON
+        description: Para preencher
+

@@ -1,6 +1,6 @@
 sources:
-  - name: person
-    description: Schemas person da Adventure Works
+  - name: sales
+    description: Schemas sales da Adventure Works
     schema: raw_adventure_works
     database: FEA24_11
     tables:
@@ -10,9 +10,7 @@ sources:
             data_tests:
               - unique
               - not_null
-      - name: address
-      - name: stateprovince
-      - name: countryregion
+      - name: customer
 
 
 
