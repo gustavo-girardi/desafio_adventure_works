@@ -1,0 +1,57 @@
+models:
+  - name: int_person__prep_territory
+    description: Modelo que enriquece os dados de endereço com estado e país
+    columns:
+      - name: PK_ADDRESS
+        description: Para preencher
+        data_tests:
+          - unique
+          - not_null
+        
+      - name: FK_TERRITORYID
+        description: Para preencher
+        
+      - name: MODIFIEDDATE_STATEPROVINCE
+        description: Para preencher
+        
+      - name: STATEPROVINCECODE
+        description: Para preencher
+        
+      - name: ISONLYSTATEPROVINCEFLAG
+        description: Para preencher
+        
+      - name: STATE_NAME
+        description: Para preencher
+        
+      - name: ROWGUID_STATEPROVINCE
+        description: Para preencher
+        
+      - name: MODIFIEDDATE_COUNTRYREGION
+        description: Para preencher
+        
+      - name: COUNTRY_NAME
+        description: Para preencher
+        
+      - name: FK_STATEPROVINCE
+        description: Para preencher
+        
+      - name: MODIFIEDDATE_ADDRESS
+        description: Para preencher
+        
+      - name: ADDRESSLINE1
+        description: Para preencher
+        
+      - name: ADDRESSLINE2
+        description: Para preencher
+        
+      - name: CITY
+        description: Para preencher
+        
+      - name: POSTALCODE
+        description: Para preencher
+        
+      - name: SPATIALLOCATION
+        description: Para preencher
+        
+      - name: ROWGUID_ADDRESS
+        description: Para preencher
