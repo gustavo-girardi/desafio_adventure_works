@@ -1,0 +1,18 @@
+sources:
+  - name: person
+    description: Schemas sales da Adventure Works
+    schema: raw_adventure_works
+    database: FEA24_11
+    tables:
+      - name: person
+        columns:
+          - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+      - name: address
+      - name: stateprovince
+      - name: countryregion
+
+
+
