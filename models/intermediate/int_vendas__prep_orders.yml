@@ -1,0 +1,112 @@
+models:
+  - name: int_vendas__prep_orders
+    description: Modelo que enriquece os dados de ordens
+    columns:
+      - name: PK_SALESORDERDETAILID
+        description: Para preencher
+        data_tests:
+          - unique
+          - not_null
+
+      - name: FK_SALESORDER
+        description: Para preencher
+
+      - name: FK_CUSTOMER
+        description: Para preencher
+
+      - name: FK_SALESPERSON
+        description: Para preencher
+
+      - name: FK_TERRITORY
+        description: Para preencher
+
+      - name: FK_CREDITCARDID
+        description: Para preencher
+
+      - name: FK_CURRENCYRATE
+        description: Para preencher
+
+      - name: FK_PRODUCT
+        description: Para preencher
+
+      - name: FK_SPECIALOFFERID
+        description: Para preencher
+
+      - name: PK_SALESORDER
+        description: Para preencher
+
+      - name: CARRIERTRACKINGNUMBER
+        description: Para preencher
+
+      - name: BILLTOADDRESSID
+        description: Para preencher
+
+      - name: SHIPTOADDRESSID
+        description: Para preencher
+
+      - name: SHIPMETHODID
+        description: Para preencher
+
+      - name: ORDERDATE
+        description: Para preencher
+
+      - name: DUEDATE
+        description: Para preencher
+
+      - name: SHIPDATE
+        description: Para preencher
+
+      - name: TAXAMT
+        description: Para preencher
+
+      - name: FREIGHT
+        description: Para preencher
+
+      - name: CREDITCARDAPPROVALCODE
+        description: Para preencher
+
+      - name: REVISIONNUMBER
+        description: Para preencher
+
+      - name: ONLINEORDERFLAG
+        description: Para preencher
+
+      - name: PURCHASEORDERNUMBER
+        description: Para preencher
+
+      - name: ACCOUNTNUMBER
+        description: Para preencher
+
+      - name: STATUS
+        description: Para preencher
+
+      - name: ORDERQTY
+        description: Para preencher
+
+      - name: UNITPRICE
+        description: Para preencher
+
+      - name: UNITPRICEDISCOUNT
+        description: Para preencher
+
+      - name: ROWGUID_SOURCE_SALESORDERDETAIL
+        description: Para preencher
+
+      - name: MODIFIEDDATE_SOURCE_SALESORDERDETAIL
+        description: Para preencher
+
+      - name: SUBTOTAL
+        description: Para preencher
+
+      - name: TOTALDUE
+        description: Para preencher
+
+      - name: COMMENT
+        description: Para preencher
+
+      - name: ROWGUID
+        description: Para preencher
+
+      - name: MODIFIEDDATE
+        description: Para preencher
+

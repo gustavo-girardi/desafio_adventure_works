@@ -11,6 +11,6 @@ sources:
               - unique
               - not_null
       - name: customer
-
-
+      - name: salesorderheader
+      - name: salesorderdetail
 
