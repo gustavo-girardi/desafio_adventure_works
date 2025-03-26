@@ -1,6 +1,6 @@
 sources:
   - name: person
-    description: Schemas sales da Adventure Works
+    description: Schemas person da Adventure Works
     schema: raw_adventure_works
     database: FEA24_11
     tables:
