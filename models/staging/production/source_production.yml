@@ -1,0 +1,12 @@
+sources:
+  - name: production
+    description: Schemas production da Adventure Works
+    schema: raw_adventure_works
+    database: FEA24_11
+    tables:
+      - name: product
+        columns:
+          - name: PRODUCTID
+            data_tests:
+              - unique
+              - not_null
