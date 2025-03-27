@@ -1,7 +1,7 @@
 with 
     dim_customers as (
         select *
-        from {{ ref ('int_vendas__prep_customers')}}
+        from {{ ref ('int_selling__prep_customers')}}
     )
 select
     *
