@@ -6,31 +6,31 @@ with
 
     ,renomeado as (
         select 
-            cast(source_salesorderheader.SALESORDERID as int) as pk_salesorder
-            ,cast(source_salesorderheader.REVISIONNUMBER as int) as REVISIONNUMBER
-            ,cast(source_salesorderheader.ORDERDATE as date) as ORDERDATE 
-            ,cast(source_salesorderheader.DUEDATE as date) as DUEDATE 
-            ,cast(source_salesorderheader.SHIPDATE as date) as SHIPDATE 
-            ,cast(source_salesorderheader.STATUS as int) as STATUS 
-            ,cast(source_salesorderheader.ONLINEORDERFLAG as BOOLEAN) as ONLINEORDERFLAG 
-            ,cast(source_salesorderheader.PURCHASEORDERNUMBER as string) as PURCHASEORDERNUMBER 
-            ,cast(source_salesorderheader.ACCOUNTNUMBER as string) as ACCOUNTNUMBER 
-            ,cast(source_salesorderheader.CUSTOMERID as int) as fk_CUSTOMER
-            ,cast(source_salesorderheader.SALESPERSONID as int) as fk_SALESPERSON 
-            ,cast(source_salesorderheader.TERRITORYID as int) as fk_TERRITORY
-            ,cast(source_salesorderheader.BILLTOADDRESSID as int) as BILLTOADDRESSID
-            ,cast(source_salesorderheader.SHIPTOADDRESSID as int) as SHIPTOADDRESSID
-            ,cast(source_salesorderheader.SHIPMETHODID as int) as SHIPMETHODID
-            ,cast(source_salesorderheader.CREDITCARDID as int) as fk_CREDITCARDID
-            ,cast(source_salesorderheader.CREDITCARDAPPROVALCODE as string) as CREDITCARDAPPROVALCODE
-            ,cast(source_salesorderheader.CURRENCYRATEID as int) as fk_CURRENCYRATE
-            ,cast(source_salesorderheader.SUBTOTAL as numeric(18,2)) as SUBTOTAL
-            ,cast(source_salesorderheader.TAXAMT as numeric(18,2)) as TAXAMT
-            ,cast(source_salesorderheader.FREIGHT as numeric(18,2)) as FREIGHT
-            ,cast(source_salesorderheader.TOTALDUE as numeric(18,2)) as TOTALDUE
-            ,cast(source_salesorderheader.COMMENT as string) as COMMENT
-            ,cast(source_salesorderheader.ROWGUID as string) as ROWGUID
-            ,cast(source_salesorderheader.MODIFIEDDATE as date) as MODIFIEDDATE
+            cast(source_salesorderheader.salesorderid as int) as pk_salesorder
+            ,cast(source_salesorderheader.customerid as int) as fk_customer
+            ,cast(source_salesorderheader.shiptoaddressid as int) as fk_address
+            ,cast(source_salesorderheader.creditcardid as int) as fk_creditcard
+            ,cast(source_salesorderheader.orderdate as date) as orderdate 
+            ,cast(source_salesorderheader.duedate as date) as duedate 
+            ,cast(source_salesorderheader.shipdate as date) as shipdate 
+            ,cast(source_salesorderheader.status as int) as status 
+            ,cast(source_salesorderheader.onlineorderflag as BOOLEAN) as has_online_order 
+            ,cast(source_salesorderheader.taxamt as numeric(18,2)) as taxamt
+            ,cast(source_salesorderheader.freight as numeric(18,2)) as freight
+            --,cast(source_salesorderheader.currencyrateid as int) as fk_currencyrate
+            --,cast(source_salesorderheader.revisionnumber as int) as revisionnumber
+            -- ,cast(source_salesorderheader.purchaseordernumber as string) as purchaseordernumber 
+            -- ,cast(source_salesorderheader.accountnumber as string) as accountnumber
+            --,cast(source_salesorderheader.salesperson as int) as fk_salesperson 
+            --,cast(source_salesorderheader.territoryid as int) as fk_territory
+            --,cast(source_salesorderheader.billtoaddressid as int) as fk_billtoaddressid
+            --,cast(source_salesorderheader.shipmethodid as int) as fk_shipmethod
+            --,cast(source_salesorderheader.creditcardapprovalcode as string) as creditcardapprovalcode
+            --,cast(source_salesorderheader.subtotal as numeric(18,2)) as subtotal
+            --,cast(source_salesorderheader.totaldue as numeric(18,2)) as totaldue
+            --,cast(source_salesorderheader.comment as string) as comment
+            --,cast(source_salesorderheader.rowguid as string) as rowguid
+            --,cast(source_salesorderheader.modifieddate as date) as modifieddate
         from
             source_salesorderheader
     )
