@@ -6,19 +6,19 @@ with
 
     , renomeado as (
         select
-            cast(source_person.BUSINESSENTITYID as int) as pk_PERSON
-            ,cast(source_person.PERSONTYPE as string) as PERSONTYPE
-            ,cast(source_person.NAMESTYLE as BOOLEAN) as NAMESTYLE
-            ,cast(source_person.TITLE as string) as TITLE
-            ,cast(source_person.FIRSTNAME as string) as FIRSTNAME
-            ,cast(source_person.MIDDLENAME as string) as MIDDLENAME
-            ,cast(source_person.LASTNAME as string) as LASTNAME
-            ,cast(source_person.SUFFIX as string) as SUFFIX
-            ,cast(source_person.EMAILPROMOTION as int) as EMAILPROMOTION
-            ,cast(source_person.ADDITIONALCONTACTINFO as string) as ADDITIONALCONTACTINFO
-            ,cast(source_person.DEMOGRAPHICS as string) as DEMOGRAPHICS
-            ,cast(source_person.ROWGUID as string) as ROWGUID_person
-            ,cast(source_person.MODIFIEDDATE as date) as MODIFIEDDATE_person
+            cast(source_person.businessentityid as int) as pk_person
+            ,cast(source_person.persontype as string) as persontype
+            ,cast(source_person.title as string) as title
+            ,cast(source_person.firstname as string) as firstname
+            ,cast(source_person.middlename as string) as middlename
+            ,cast(source_person.lastname as string) as lastname
+            ,cast(source_person.suffix as string) as suffix
+            --,cast(source_person.namestyle as BOOLEAN) as namestyle
+            --,cast(source_person.emailpromotion as int) as emailpromotion
+            --,cast(source_person.additionalcontactinfo as string) as additionalcontactinfo
+            --,cast(source_person.demographics as string) as demographics
+            --,cast(source_person.rowguid as string) as rowguid
+            --,cast(source_person.modifieddate as date) as modifieddate
         from
             source_person
     )

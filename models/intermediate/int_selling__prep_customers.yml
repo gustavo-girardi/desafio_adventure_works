@@ -1,5 +1,5 @@
 models:
-  - name: int_person__prep_customers
+  - name: int_selling__prep_customers
     description: Modelo que enriquece os dados de clientes com nome
     columns:
       - name: PK_CUSTOMER
