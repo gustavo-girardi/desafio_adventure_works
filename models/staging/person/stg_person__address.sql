@@ -6,15 +6,15 @@ with
 
     , renomeado as (
         select
-            cast(ADDRESSID as int) as pk_address
-            , cast(STATEPROVINCEID as int) as fk_stateprovince
-            , cast(MODIFIEDDATE as date) as MODIFIEDDATE
-            , cast(ADDRESSLINE1 as string) as ADDRESSLINE1
-            , cast(ADDRESSLINE2 as string) as ADDRESSLINE2
-            , cast(CITY as string) as CITY
-            , cast(POSTALCODE as string) as POSTALCODE
-            , cast(SPATIALLOCATION as string) as SPATIALLOCATION
-            , cast(ROWGUID as string) as ROWGUID
+            cast(Addressid as int) as pk_address
+            , cast(stateprovinceid as int) as fk_stateprovince
+            , cast(city as string) as city
+            --, cast(modifieddate as date) as modifieddate
+            --, cast(addressline1 as string) as addressline1
+            --, cast(addressline2 as string) as addressline2
+            --, cast(postalcode as string) as postalcode
+            --, cast(spatiallocation as string) as spatiallocation
+            --, cast(rowguid as string) as rowguid
         from
             source_address
     )

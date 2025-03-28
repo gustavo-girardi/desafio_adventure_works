@@ -1,7 +1,7 @@
 with 
     dim_territory as (
         select *
-        from {{ ref ('int_vendas__prep_territory')}}
+        from {{ ref ('int_selling__prep_territory')}}
     )
 select
     *

@@ -1,6 +1,6 @@
 models:
-  - name: dim_territory
-    description: Dimensão de território da Adventure Works
+  - name: int_selling__prep_territory
+    description: Modelo que enriquece os dados de endereço com estado e país
     columns:
       - name: PK_ADDRESS
         description: Para preencher
@@ -8,4 +8,3 @@ models:
           - unique
           - not_null
         
-      
