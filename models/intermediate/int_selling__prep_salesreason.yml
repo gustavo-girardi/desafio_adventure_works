@@ -1,0 +1,6 @@
+models:
+  - name: int_selling__prep_salesreason
+    description: Modelo que enriquece os dados com as razões
+    columns:
+      - name: PK_SALESORDER
+        description: Para preencher
