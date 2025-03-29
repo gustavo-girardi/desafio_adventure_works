@@ -4,7 +4,7 @@ with
         from {{ ref ('stg_production__product')}}
     )
 
-    ,productcategory as (
+    ,category as (
         select *
         from {{ ref ('stg_production__productcategory')}}
     )
@@ -17,16 +17,15 @@ with
     ,join_subcategory_productcategory as (
         select
             subcategory.pk_productsubcategory
-            , subcategory.fk_productcategory
             , subcategory.subcategory_name
-            , productcategory.category_name
+            , category.category_name
         from
             subcategory
         left join
-            productcategory on productcategory.pk_productcategory = subcategory.sk_productcategory
+            category on category.pk_productcategory = subcategory.fk_productcategory
     )
 
-    , enriquecer_product as (
+    ,enriquecer_product as (
         select
              product.pk_product
             , product.product_name
@@ -35,7 +34,7 @@ with
         from
             product
         left join
-            join_subcategory_productcategory on join_subcategory_productcategory.pk_productcategory = product.sk_productcategory
+            join_subcategory_productcategory on join_subcategory_productcategory.pk_productsubcategory = product.fk_productsubcategory
     )
 
 select

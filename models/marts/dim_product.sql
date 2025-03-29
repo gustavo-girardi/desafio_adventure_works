@@ -1,7 +1,7 @@
 with 
     dim_product as (
         select *
-        from {{ ref ('stg_production__product')}}
+        from {{ ref ('int_selling__prep_products')}}
     )
 select
     *
