@@ -10,3 +10,15 @@ sources:
             data_tests:
               - unique
               - not_null
+      - name: productsubcategory
+        columns:
+          - name: productsubcategoryid
+            data_tests:
+              - unique
+              - not_null
+      - name: productcategory
+        columns:
+          - name: productcategoryid
+            data_tests:
+              - unique
+              - not_null

@@ -6,31 +6,31 @@ with
 
     ,renomeado as (
         select 
-            cast(source_product.PRODUCTID as int) as pk_product
-            ,cast(source_product.NAME as string) as product_name
-            ,cast(source_product.PRODUCTNUMBER as string) as PRODUCTNUMBER
-            ,cast(source_product.MAKEFLAG as boolean) as MAKEFLAG
-            ,cast(source_product.FINISHEDGOODSFLAG as boolean) as FINISHEDGOODSFLAG
-            ,cast(source_product.COLOR as string) as COLOR
-            ,cast(source_product.SAFETYSTOCKLEVEL as int) as SAFETYSTOCKLEVEL
-            ,cast(source_product.REORDERPOINT as int) as REORDERPOINT
-            ,cast(source_product.STANDARDCOST as numeric(18,2)) as STANDARDCOST
-            ,cast(source_product.LISTPRICE as numeric(18,2)) as LISTPRICE
-            ,cast(source_product."SIZE" as string) as "SIZE"
-            ,cast(source_product.SIZEUNITMEASURECODE as string) as SIZEUNITMEASURECODE
-            ,cast(source_product.WEIGHTUNITMEASURECODE as string) as WEIGHTUNITMEASURECODE
-            ,cast(source_product.WEIGHT as numeric(18,2)) as WEIGHT
-            ,cast(source_product.DAYSTOMANUFACTURE as int) as DAYSTOMANUFACTURE
-            ,cast(source_product.PRODUCTLINE as string) as PRODUCTLINE
-            ,cast(source_product.CLASS as string) as CLASS
-            ,cast(source_product.STYLE as string) as STYLE
-            ,cast(source_product.PRODUCTSUBCATEGORYID as int) as fk_PRODUCTSUBCATEGORY
-            ,cast(source_product.PRODUCTMODELID as int) as fk_PRODUCTMODEL
-            ,cast(source_product.SELLSTARTDATE as date) as SELLSTARTDATE
-            ,cast(source_product.SELLENDDATE as date) as SELLENDDATE
-            ,cast(source_product.DISCONTINUEDDATE as string) as DISCONTINUEDDATE
-            ,cast(source_product.ROWGUID as string) as ROWGUID
-            ,cast(source_product.MODIFIEDDATE as date) as MODIFIEDDATE
+            cast(source_product.productid as int) as pk_product
+            ,cast(source_product.name as string) as product_name
+            ,cast(source_product.productsubcategoryid as int) as fk_productsubcategory
+            --,cast(source_product.productnumber as string) as productnumber
+            --,cast(source_product.makeflag as boolean) as makeflag
+            --,cast(source_product.finishedgoodsflag as boolean) as finishedgoodsflag
+            --,cast(source_product.color as string) as color
+            --,cast(source_product.safetystocklevel as int) as safetystocklevel
+            --,cast(source_product.reorderpoint as int) as reorderpoint
+            --,cast(source_product.standardcost as numeric(18,2)) as standardcost
+            --,cast(source_product.listprice as numeric(18,2)) as listprice
+            --,cast(source_product."size" as string) as "size"
+            --,cast(source_product.sizeunitmeasurecode as string) as sizeunitmeasurecode
+            --,cast(source_product.weightunitmeasurecode as string) as weightunitmeasurecode
+            --,cast(source_product.weight as numeric(18,2)) as weight
+            --,cast(source_product.daystomanufacture as int) as daystomanufacture
+            --,cast(source_product.productline as string) as productline
+            --,cast(source_product.class as string) as class
+            --,cast(source_product.style as string) as style
+            --,cast(source_product.productmodelid as int) as productmodelid
+            --,cast(source_product.sellstartdate as date) as sellstartdate
+            --,cast(source_product.sellenddate as date) as sellenddate
+            --,cast(source_product.discontinueddate as string) as discontinueddate
+            --,cast(source_product.rowguid as string) as rowguid
+            --,cast(source_product.modifieddate as date) as modifieddate
 
         from
             source_product
