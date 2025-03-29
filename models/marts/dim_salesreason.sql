@@ -1,7 +1,7 @@
 with 
     dim_salesreason as (
         select *
-        from {{ ref ('int_selling__prep_salesreason_3')}}
+        from {{ ref ('int_selling__prep_salesreason')}}
     )
 select
     *

@@ -22,21 +22,22 @@ with
 
     ,criar_colunas_reason as (
         SELECT 
-            enriquecer.pk_salesorder
-            ,MAX(CASE WHEN reason_name = 'Television Advertisement' THEN 1 ELSE 0 END) AS reason_name_price
-            ,MAX(CASE WHEN reason_name = 'Demo Event' THEN 1 ELSE 0 END) AS reason_name_quality
-            ,MAX(CASE WHEN reason_name = 'Other' THEN 1 ELSE 0 END) AS reason_name_manufacturer
-            ,MAX(CASE WHEN reason_name = 'Price' THEN 1 ELSE 0 END) AS reason_name_manufacturer
-            ,MAX(CASE WHEN reason_name = 'Manufacturer' THEN 1 ELSE 0 END) AS reason_name_manufacturer
-            ,MAX(CASE WHEN reason_name = 'Quality' THEN 1 ELSE 0 END) AS reason_name_manufacturer
-            ,MAX(CASE WHEN reason_name = 'On Promotion' THEN 1 ELSE 0 END) AS reason_name_manufacturer
-            ,MAX(CASE WHEN reason_name = 'Magazine Advertisement' THEN 1 ELSE 0 END) AS reason_name_manufacturer
-            ,MAX(CASE WHEN reason_name = 'Sponsorship' THEN 1 ELSE 0 END) AS reason_name_manufacturer
-            ,MAX(CASE WHEN reason_name = 'Review' THEN 1 ELSE 0 END) AS reason_name_manufacturer
+            pk_salesorder
+            , LISTAGG(reason_name, ', ') WITHIN GROUP (ORDER BY reason_name) 
+                OVER (PARTITION BY PK_SALESORDER) AS reason_name_concat
+            , LISTAGG(reasontype, ', ') WITHIN GROUP (ORDER BY reasontype) 
+                OVER (PARTITION BY PK_SALESORDER) AS reasontype_concat
         FROM enriquecer
-        GROUP BY enriquecer.pk_salesorder
     )
+    
+    ,colunas_unicas AS (
+        SELECT DISTINCT 
+            pk_salesorder,
+            reason_name_concat,
+            reasontype_concat
+        FROM criar_colunas_reason
+    ) 
 select
     *
 from
-    criar_colunas_reason
+    colunas_unicas
