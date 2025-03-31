@@ -13,7 +13,11 @@ with
         select
             customer.pk_customer
             ,person.persontype
-            ,person.title || ' ' || person.firstname || ' ' || person.middlename || ' ' || person.lastname || ' ' || person.suffix as full_name
+            , COALESCE(person.title, '') || ' ' || 
+              COALESCE(person.firstname, '') || ' ' || 
+              COALESCE(person.middlename, '') || ' ' || 
+              COALESCE(person.lastname, '') || ' ' || 
+              COALESCE(person.suffix, '') AS full_name
         from
             customer
         left join
