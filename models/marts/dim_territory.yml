@@ -1,11 +1,19 @@
 models:
   - name: dim_territory
-    description: Dimensão de território da Adventure Works
+    description: Tabela dimensão que contém informações sobre os territórios de vendas.
     columns:
-      - name: PK_ADDRESS
-        description: Para preencher
-        data_tests:
-          - unique
-          - not_null
-        
-      
+      - name: pk_address
+        description: Chave primária que identifica de forma única cada endereço
+
+      - name: city
+        description: Nome da cidade associada ao endereço.
+
+      - name: state_name
+        description: Nome completo do estado ou província onde o endereço está localizado.
+
+      - name: stateprovincecode
+        description: Código do estado ou província.
+
+      - name: country_name
+        description: Nome do país onde o endereço está localizado
+

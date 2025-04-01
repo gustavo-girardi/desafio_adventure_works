@@ -12,7 +12,6 @@ with
     ,enriquecer as (
         select
             customer.pk_customer
-            ,person.persontype
             , COALESCE(person.title, '') || ' ' || 
               COALESCE(person.firstname, '') || ' ' || 
               COALESCE(person.middlename, '') || ' ' || 

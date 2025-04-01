@@ -1,6 +1,6 @@
 models:
-  - name: int_selling__prep_customers
-    description: Tabela intermediária com informações dos clientes.
+  - name: dim_customers
+    description: Tabela dimensão contendo informações sobre os clientes.
     columns:
       - name: pk_customer
         description: Chave primária que identifica de forma única cada cliente.
@@ -9,6 +9,3 @@ models:
           - not_null
       - name: full_name
         description: Nome completo do cliente, incluindo nome e sobrenome.
-
-
-      

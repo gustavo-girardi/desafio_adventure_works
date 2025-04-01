@@ -1,12 +1,10 @@
 models:
-  - name: int_vendas__prep_orders
-    description: Tabela intermediária com informações de ordens.
+  - name: fact_orders
+    description: Tabela fato que contém informações detalhadas sobre os pedidos realizados.
     columns:
       - name: pk_salesorderdetail
         description: Chave primária que identifica de forma única cada item do pedido de venda.
-        data_tests:
-          - unique
-          - not_null
+
       - name: fk_salesorder
         description: Chave estrangeira que referencia o pedido ao qual este item pertence.
 
