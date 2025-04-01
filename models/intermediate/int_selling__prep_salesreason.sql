@@ -32,9 +32,9 @@ with
     
     ,colunas_unicas AS (
         SELECT DISTINCT 
-            pk_salesorder,
-            reason_name_concat,
-            reasontype_concat
+            pk_salesorder
+            , reason_name_concat
+            , reasontype_concat
         FROM criar_colunas_reason
     ) 
 select

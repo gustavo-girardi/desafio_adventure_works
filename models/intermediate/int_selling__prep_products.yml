@@ -1,0 +1,9 @@
+models:
+  - name: int_selling__prep_products
+    description: Modelo que enriquece os dados de produtos
+    columns:
+      - name: PK_PRODUCT
+        description: Para preencher
+        data_tests:
+          - unique
+          - not_null

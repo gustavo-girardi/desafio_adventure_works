@@ -15,8 +15,8 @@ with
             ,cast(source_salesorderheader.shipdate as date) as shipdate 
             ,cast(source_salesorderheader.status as int) as status 
             ,cast(source_salesorderheader.onlineorderflag as BOOLEAN) as has_online_order 
-            ,cast(source_salesorderheader.taxamt as numeric(18,2)) as taxamt
-            ,cast(source_salesorderheader.freight as numeric(18,2)) as freight
+            ,cast(source_salesorderheader.taxamt as numeric(18,4)) as taxamt
+            ,cast(source_salesorderheader.freight as numeric(18,4)) as freight
             --,cast(source_salesorderheader.currencyrateid as int) as fk_currencyrate
             --,cast(source_salesorderheader.revisionnumber as int) as revisionnumber
             -- ,cast(source_salesorderheader.purchaseordernumber as string) as purchaseordernumber 

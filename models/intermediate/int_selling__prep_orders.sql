@@ -29,8 +29,8 @@ with
             , salesorderdetail.orderqty
             , salesorderdetail.unitprice
             , salesorderdetail.orderqty * salesorderdetail.unitprice as gross_total
-            , cast(salesorderheader.freight / count(*) over(partition by fk_salesorder) as numeric(18,2)) as allocated_freight
-            , cast(salesorderheader.taxamt / count(*) over(partition by fk_salesorder) as numeric(18,2)) as allocated_taxamt            
+            , cast(salesorderheader.freight / count(*) over(partition by fk_salesorder) as numeric(18,4)) as allocated_freight
+            , cast(salesorderheader.taxamt / count(*) over(partition by fk_salesorder) as numeric(18,4)) as allocated_taxamt            
             , salesorderdetail.unitpricediscount
         from
             salesorderdetail
