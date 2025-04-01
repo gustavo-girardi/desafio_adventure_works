@@ -1,0 +1,12 @@
+models:
+  - name: dim_cardtype
+    description: Tabela dimensão que contém informações sobre os tipos de cartões disponíveis
+    columns:
+      - name: pk_creditcard
+        description: Chave primária que identifica de forma única cada tipo de cartão.
+
+      - name: cardtype
+        description: Nome do tipo de cartão.
+
+        
+      

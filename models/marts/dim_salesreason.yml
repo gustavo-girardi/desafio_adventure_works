@@ -1,12 +1,9 @@
 models:
-  - name: int_selling__prep_salesreason
-    description: Tabela intermediária contendo informações sobre os motivos associados aos pedidos.
+  - name: dim_salesreason
+    description: Tabela dimensão que contém informações sobre os motivos associados às vendas.
     columns:
       - name: pk_salesorder
         description: Chave primária que identifica de forma única cada pedido de venda.
-        data_tests:
-          - unique
-          - not_null
 
       - name: reason_name_concat
         description: Lista concatenada dos nomes dos motivos associados ao pedido de venda.

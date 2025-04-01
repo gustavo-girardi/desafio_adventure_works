@@ -1,10 +1,22 @@
 models:
   - name: int_selling__prep_territory
-    description: Modelo que enriquece os dados de endereço com estado e país
+    description: Tabela intermediária contendo informações sobre os destinos de entrega.
     columns:
-      - name: PK_ADDRESS
-        description: Para preencher
+      - name: pk_address
+        description: Chave primária que identifica de forma única cada endereço
         data_tests:
           - unique
           - not_null
-        
+
+      - name: city
+        description: Nome da cidade associada ao endereço.
+
+      - name: state_name
+        description: Nome completo do estado ou província onde o endereço está localizado.
+
+      - name: stateprovincecode
+        description: Código do estado ou província.
+
+      - name: country_name
+        description: Nome do país onde o endereço está localizado
+
