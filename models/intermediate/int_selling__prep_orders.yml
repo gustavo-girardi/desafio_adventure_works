@@ -57,3 +57,6 @@ models:
 
       - name: unitpricediscount
         description: Desconto aplicado sobre o preço unitário do produto no pedido.
+
+      - name: discounted_total
+        description: Valor total líquido do pedido após a aplicação de descontos, antes de impostos e frete.
