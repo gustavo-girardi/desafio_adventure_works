@@ -32,6 +32,7 @@ with
             , cast(salesorderheader.freight / count(*) over(partition by fk_salesorder) as numeric(18,4)) as allocated_freight
             , cast(salesorderheader.taxamt / count(*) over(partition by fk_salesorder) as numeric(18,4)) as allocated_taxamt            
             , salesorderdetail.unitpricediscount
+            , cast(salesorderdetail.orderqty * salesorderdetail.unitprice * (1-salesorderdetail.unitpricediscount) as numeric(18,4)) as discounted_total
         from
             salesorderdetail
         left join
