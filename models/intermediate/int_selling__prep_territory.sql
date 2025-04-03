@@ -14,7 +14,7 @@ with
         from {{ ref ('stg_person__stateprovince')}}
     )
 
-    ,enriquecer_stateprovince as (
+    ,join_stateprovince_countryregion as (
         select
             stateprovince.pk_stateprovince 
             , countryregion.country_name 
@@ -26,20 +26,20 @@ with
             countryregion on countryregion.pk_COUNTRYREGIONCODE = stateprovince.fk_COUNTRYREGIONCODE
     )
 
-    ,enriquecer_adress as (
+    ,join_adress as (
         select
             address.pk_address
             , address.city
-            , enriquecer_stateprovince.state_name
-            , enriquecer_stateprovince.stateprovincecode            
-            , enriquecer_stateprovince.country_name 
+            , join_stateprovince_countryregion.state_name
+            , join_stateprovince_countryregion.stateprovincecode            
+            , join_stateprovince_countryregion.country_name 
         from
             address
         left join
-            enriquecer_stateprovince on enriquecer_stateprovince.pk_stateprovince = address.fk_stateprovince
+            join_stateprovince_countryregion on join_stateprovince_countryregion.pk_stateprovince = address.fk_stateprovince
     )
         
 select
     *
 from
-    enriquecer_adress
+    join_adress

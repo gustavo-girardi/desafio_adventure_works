@@ -9,7 +9,7 @@ with
         from {{ ref ('stg_sales__customer')}}
     )
 
-    ,enriquecer as (
+    ,join_customer_person as (
         select
             customer.pk_customer
             , COALESCE(person.title, '') || ' ' || 
@@ -27,4 +27,4 @@ with
 select
     *
 from
-    enriquecer
+    join_customer_person

@@ -25,7 +25,7 @@ with
             category on category.pk_productcategory = subcategory.fk_productcategory
     )
 
-    ,enriquecer_product as (
+    ,join_product as (
         select
              product.pk_product
             , product.product_name
@@ -40,4 +40,4 @@ with
 select
     *
 from
-    enriquecer_product
+    join_product
