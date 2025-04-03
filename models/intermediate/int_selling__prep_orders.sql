@@ -9,7 +9,7 @@ with
         from {{ ref ('stg_sales__salesorderheader')}}
     )
 
-    ,gross_total as (
+    ,join_salesorderdetail_salesorderheader as (
         select
             salesorderdetail.pk_salesorderdetail 
             , salesorderdetail.fk_salesorder 
@@ -42,4 +42,4 @@ with
     select
         *
     from
-        gross_total
+        join_salesorderdetail_salesorderheader
