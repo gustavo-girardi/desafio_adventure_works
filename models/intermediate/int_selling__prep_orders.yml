@@ -1,5 +1,7 @@
+version: 2 
+
 models:
-  - name: int_vendas__prep_orders
+  - name: int_selling__prep_orders
     description: Tabela intermediária com informações de ordens.
     columns:
       - name: pk_salesorderdetail
