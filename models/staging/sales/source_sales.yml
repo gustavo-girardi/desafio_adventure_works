@@ -4,16 +4,39 @@ sources:
     schema: raw_adventure_works
     database: FEA24_11
     tables:
-      - name: person
-        columns:
-          - name: businessentityid
+      - name: customer
+        columns: 
+          - name: customerid
             data_tests:
               - unique
               - not_null
-      - name: customer
       - name: salesorderheader
+        columns: 
+          - name: salesorderid
+            data_tests:
+              - unique
+              - not_null
+
       - name: salesorderdetail
+        columns: 
+          - name: salesorderdetailid
+            data_tests:
+              - unique
+              - not_null
+
       - name: creditcard
+        columns:
+          - name: creditcardid
+            data_tests:
+              - unique
+              - not_null
+
       - name: salesorderheadersalesreason
+
       - name: salesreason
+        columns:
+          - name: salesreasonid
+            data_tests:
+              - unique
+              - not_null
 
