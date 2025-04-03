@@ -6,7 +6,7 @@ with
 
     , renomeado as (
         select
-            cast(Addressid as int) as pk_address
+            cast(addressid as int) as pk_address
             , cast(stateprovinceid as int) as fk_stateprovince
             , cast(city as string) as city
             --, cast(modifieddate as date) as modifieddate
